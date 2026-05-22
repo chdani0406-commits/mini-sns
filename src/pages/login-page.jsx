@@ -39,7 +39,7 @@ function LoginPage({ auth }) {
     const { error } = await auth.signIn(loginForm);
     setLoading(false);
     if (error) {
-      setError(error.message || '이메일 또는 비밀번호가 올바르지 않습니다.');
+      setError('이메일 또는 비밀번호가 올바르지 않습니다.');
     } else {
       navigate('/home');
     }
